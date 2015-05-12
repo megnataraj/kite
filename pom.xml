@@ -17,7 +17,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.kitesdk</groupId>
+  <groupId>com.cerner.pophealth.procinfra</groupId>
   <artifactId>kite-parent</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -1125,19 +1125,12 @@
   </dependencyManagement>
 
   <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+     <snapshotRepository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>pophealth-snapshot</id>
+      <name>Population Health Processing Infrastructure</name>
+      <url>http://repo.pophealth.cerner.corp/nexus/content/repositories/pophealth-snapshot</url>
     </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    <site>
-      <id>kitesdk.website</id>
-      <name>Kite SDK documentation</name>
-      <url>docs/${project.version}</url>
-    </site>
   </distributionManagement>
 
   <profiles>
