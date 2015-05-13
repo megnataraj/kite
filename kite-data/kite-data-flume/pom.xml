@@ -20,7 +20,7 @@
   <artifactId>kite-data-flume</artifactId>
 
   <parent>
-    <groupId>org.kitesdk</groupId>
+    <groupId>com.cerner.pophealth.procinfra</groupId>
     <artifactId>kite-data</artifactId>
     <version>1.0.1-SNAPSHOT</version>
   </parent>

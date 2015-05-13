@@ -21,7 +21,7 @@
   <packaging>pom</packaging>
 
   <parent>
-    <groupId>org.kitesdk</groupId>
+    <groupId>com.cerner.pophealth.procinfra</groupId>
     <artifactId>kite-tools-parent</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <relativePath>../</relativePath>
