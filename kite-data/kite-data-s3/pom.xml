@@ -123,20 +123,20 @@
   <dependencies>
     <!-- Kite -->
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-data-core</artifactId>
       <version>${project.parent.version}</version>
     </dependency>
 
     <!-- Hadoop -->
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>${artifact.hadoop-deps}</artifactId>
       <type>pom</type>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-hadoop-compatibility</artifactId>
     </dependency>
 
@@ -182,7 +182,7 @@
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-data-core</artifactId>
       <version>${project.parent.version}</version>
       <type>test-jar</type>
@@ -190,7 +190,7 @@
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>${artifact.hadoop-test-deps}</artifactId>
       <type>pom</type>
       <scope>test</scope>

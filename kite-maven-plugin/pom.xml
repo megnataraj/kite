@@ -72,17 +72,17 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-data-core</artifactId>
       <version>1.0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-data-hbase</artifactId>
       <version>1.0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-data-hive</artifactId>
       <version>1.0.1-SNAPSHOT</version>
     </dependency>
@@ -127,7 +127,7 @@
       <artifactId>commons-io</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>${artifact.hadoop-deps}</artifactId>
       <type>pom</type>
       <scope>provided</scope> <!-- has to be added as a plugin dependency -->
@@ -155,7 +155,7 @@
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-data-core</artifactId>
       <version>${project.version}</version>
       <type>test-jar</type>
@@ -163,7 +163,7 @@
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>${artifact.hadoop-test-deps}</artifactId>
       <type>pom</type>
       <scope>test</scope>

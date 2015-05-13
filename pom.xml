@@ -752,20 +752,20 @@
     <dependencies>
       <!-- Hadoop dependencies -->
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>${artifact.hadoop-deps}</artifactId>
         <version>${project.version}</version>
         <type>pom</type>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>${artifact.hadoop-test-deps}</artifactId>
         <version>${project.version}</version>
         <type>pom</type>
         <scope>test</scope>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-hadoop-compatibility</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -778,13 +778,13 @@
 
       <!-- HBase dependencies -->
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>${artifact.hbase-deps}</artifactId>
         <version>${project.version}</version>
         <type>pom</type>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>${artifact.hbase-test-deps}</artifactId>
         <version>${project.version}</version>
         <type>pom</type>

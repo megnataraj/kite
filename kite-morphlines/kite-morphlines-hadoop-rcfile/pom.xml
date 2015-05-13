@@ -26,19 +26,19 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-morphlines-core</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-morphlines-core</artifactId>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>${artifact.hadoop-deps}</artifactId>
       <type>pom</type>
       <scope>provided</scope>
@@ -46,7 +46,7 @@
 
     <!-- for dynamic hadoop methods (hadoop 1 and 2 compatible) -->
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-hadoop-compatibility</artifactId>
     </dependency>
 
@@ -58,7 +58,7 @@
 
     <!-- for MiniDFSCluster -->
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>${artifact.hadoop-test-deps}</artifactId>
       <type>pom</type>
       <scope>test</scope>

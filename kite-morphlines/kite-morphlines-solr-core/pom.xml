@@ -28,7 +28,7 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-morphlines-core</artifactId>
     </dependency>
 
@@ -50,14 +50,14 @@
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-morphlines-core</artifactId>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-morphlines-avro</artifactId>
       <scope>test</scope>
     </dependency>

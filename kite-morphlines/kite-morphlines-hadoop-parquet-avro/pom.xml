@@ -26,13 +26,13 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-morphlines-core</artifactId>
     </dependency>
 
     <!-- needed for parquet-avro -->
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>${artifact.hadoop-deps}</artifactId>
       <type>pom</type>
       <scope>provided</scope>
@@ -50,7 +50,7 @@
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-morphlines-core</artifactId>
       <type>test-jar</type>
       <scope>test</scope>

@@ -13,7 +13,7 @@ See [Online Documentation](http://kitesdk.org/docs/current/kite-morphlines/index
 
 ```xml
 <dependency>
-  <groupId>org.kitesdk</groupId>
+  <groupId>com.cerner.pophealth.procinfra</groupId>
   <artifactId>kite-morphlines-core</artifactId>
   <version>1.0.0</version> <!-- or whatever the latest version is -->
 </dependency>
@@ -23,7 +23,7 @@ See [Online Documentation](http://kitesdk.org/docs/current/kite-morphlines/index
 
 ```xml
 <dependency>
-  <groupId>org.kitesdk</groupId>
+  <groupId>com.cerner.pophealth.procinfra</groupId>
   <artifactId>kite-morphlines-all</artifactId>
   <version>1.0.0</version> <!-- or whatever the latest version is -->
   <type>pom</type>
@@ -34,7 +34,7 @@ See [Online Documentation](http://kitesdk.org/docs/current/kite-morphlines/index
 
 ```xml
 <dependency>
-  <groupId>org.kitesdk</groupId>
+  <groupId>com.cerner.pophealth.procinfra</groupId>
   <artifactId>kite-morphlines-core</artifactId>
   <type>test-jar</type>
   <scope>test</scope>

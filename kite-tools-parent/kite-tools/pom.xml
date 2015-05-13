@@ -195,14 +195,14 @@
     <!-- The Hadoop and HBase dependency bundles are not inherited -->
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>${artifact.hadoop-deps}</artifactId>
       <type>pom</type>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>${artifact.hbase-deps}</artifactId>
       <type>pom</type>
       <scope>provided</scope>

@@ -17,7 +17,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.kitesdk</groupId>
+  <groupId>com.cerner.pophealth.procinfra</groupId>
   <artifactId>kite-app-parent-cdh4</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -119,18 +119,18 @@
       <!-- Inherited plugins -->
       <plugins>
         <plugin>
-          <groupId>org.kitesdk</groupId>
+          <groupId>com.cerner.pophealth.procinfra</groupId>
           <artifactId>kite-maven-plugin</artifactId>
           <version>${kite.version}</version>
           <dependencies>
             <dependency>
-              <groupId>org.kitesdk</groupId>
+              <groupId>com.cerner.pophealth.procinfra</groupId>
               <artifactId>kite-hadoop-cdh4-dependencies</artifactId>
               <version>${kite.version}</version>
               <type>pom</type>
             </dependency>
             <dependency>
-              <groupId>org.kitesdk</groupId>
+              <groupId>com.cerner.pophealth.procinfra</groupId>
               <artifactId>kite-hbase-cdh4-dependencies</artifactId>
               <version>${kite.version}</version>
               <type>pom</type>
@@ -202,37 +202,37 @@
     <!-- Kite dependencies -->
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-data-core</artifactId>
       <version>${kite.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-data-hive</artifactId>
       <version>${kite.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-data-hbase</artifactId>
       <version>${kite.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-data-mapreduce</artifactId>
       <version>${kite.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-data-crunch</artifactId>
       <version>${kite.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-hadoop-compatibility</artifactId>
       <version>${kite.version}</version>
     </dependency>
@@ -295,7 +295,7 @@
          -->
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-hadoop-cdh4-dependencies</artifactId>
       <version>${kite.version}</version>
       <type>pom</type>
@@ -304,7 +304,7 @@
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-hbase-cdh4-dependencies</artifactId>
       <version>${kite.version}</version>
       <type>pom</type>

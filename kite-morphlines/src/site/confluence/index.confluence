@@ -38,7 +38,7 @@ To pull in the minimum set of dependencies add the following dependency to the {
 
 {code}
 <dependency>
-  <groupId>org.kitesdk</groupId>
+  <groupId>com.cerner.pophealth.procinfra</groupId>
   <artifactId>kite-morphlines-core</artifactId>
   <version>1.0.0</version> <!-- or whatever the latest version is -->
 </dependency>
@@ -48,7 +48,7 @@ Alternatively, to pull in the maximum set of dependencies (i.e. all available co
 
 {code}
 <dependency>
-  <groupId>org.kitesdk</groupId>
+  <groupId>com.cerner.pophealth.procinfra</groupId>
   <artifactId>kite-morphlines-all</artifactId>
   <version>1.0.0</version> <!-- or whatever the latest version is -->
   <type>pom</type>
@@ -280,7 +280,7 @@ For effective rapid and reliable iterative development of morphline config files
 
 {code}
 <dependency>
-  <groupId>org.kitesdk</groupId>
+  <groupId>com.cerner.pophealth.procinfra</groupId>
   <artifactId>kite-morphlines-core</artifactId>
   <type>test-jar</type>
   <scope>test</scope>

@@ -28,67 +28,67 @@
 
   <dependencies>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-core</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-avro</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-json</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-saxon</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-hadoop-core</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-hadoop-parquet-avro</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-hadoop-sequencefile</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-hadoop-rcfile</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-tika-core</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-tika-decompress</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-solr-core</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-solr-cell</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-twitter</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-maxmind</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-metrics-servlets</artifactId>
       </dependency>
       <dependency>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-morphlines-useragent</artifactId>
       </dependency>
   </dependencies>

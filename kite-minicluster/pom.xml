@@ -116,34 +116,34 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-data-core</artifactId>
       <version>${project.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-hadoop-cdh5-dependencies</artifactId>
       <version>${project.version}</version>
       <type>pom</type>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-hbase-cdh5-dependencies</artifactId>
       <version>${project.version}</version>
       <type>pom</type>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-hadoop-cdh5-test-dependencies</artifactId>
       <version>${project.version}</version>
       <type>pom</type>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-hbase-cdh5-test-dependencies</artifactId>
       <version>${project.version}</version>
       <type>pom</type>
@@ -200,7 +200,7 @@
       <version>${vers.flume-cdh5}</version>
       <exclusions>
         <exclusion>
-          <groupId>org.kitesdk</groupId>
+          <groupId>com.cerner.pophealth.procinfra</groupId>
           <artifactId>kite-data-core</artifactId>
         </exclusion>
         <exclusion>
@@ -216,7 +216,7 @@
     -->
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-data-hive</artifactId>
       <version>${project.version}</version>
     </dependency>

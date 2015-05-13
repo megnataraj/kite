@@ -98,14 +98,14 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-tools</artifactId>
       <version>${project.version}</version>
       <scope>runtime</scope>
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-minicluster</artifactId>
       <version>${project.version}</version>
       <scope>runtime</scope>
@@ -118,7 +118,7 @@
          -->
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-hadoop-cdh5-dependencies</artifactId>
       <version>${project.version}</version>
       <type>pom</type>
@@ -126,7 +126,7 @@
     </dependency>
 
     <dependency>
-      <groupId>org.kitesdk</groupId>
+      <groupId>com.cerner.pophealth.procinfra</groupId>
       <artifactId>kite-hbase-cdh5-dependencies</artifactId>
       <version>${project.version}</version>
       <type>pom</type>

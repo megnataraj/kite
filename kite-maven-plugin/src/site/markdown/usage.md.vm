@@ -16,7 +16,7 @@ datasets. Configure the Hadoop settings by declaring the plugin in your POM:
   <build>
     <plugins>
       <plugin>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-maven-plugin</artifactId>
         <version>${project.version}</version>
         <configuration>
@@ -72,7 +72,7 @@ such as MapReduce jobs which run on a cluster.
   <build>
     <plugins>
       <plugin>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-maven-plugin</artifactId>
         <version>${project.version}</version>
         <configuration>
@@ -141,7 +141,7 @@ of the Maven lifecycle.
   <build>
     <plugins>
       <plugin>
-        <groupId>org.kitesdk</groupId>
+        <groupId>com.cerner.pophealth.procinfra</groupId>
         <artifactId>kite-maven-plugin</artifactId>
         <version>${project.version}</version>
         <configuration>
