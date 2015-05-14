@@ -486,11 +486,13 @@
           <name>Population Health Processing Infrastructure</name>
           <url>http://repo.pophealth.cerner.corp/nexus/content/repositories/pophealth-snapshot</url>
         </snapshotRepository>
-         <repository>
+        <repository>
+         <uniqueVersion>false</uniqueVersion>
           <id>cerner-release-main</id>
           <name>Cerner Release Repo</name>
           <url>http://repo.release.cerner.corp/main/repo</url>
-        </repository>
+          <layout>default</layout>
+        <repository>
       </distributionManagement>
     </profile>
   </profiles>
