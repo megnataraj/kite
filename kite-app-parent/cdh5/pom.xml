@@ -481,13 +481,11 @@
       </build>
       <distributionManagement>
         <snapshotRepository>
-          <id>ossrh</id>
-          <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+          <uniqueVersion>false</uniqueVersion>
+          <id>pophealth-snapshot</id>
+          <name>Population Health Processing Infrastructure</name>
+          <url>http://repo.pophealth.cerner.corp/nexus/content/repositories/pophealth-snapshot</url>
         </snapshotRepository>
-        <repository>
-          <id>ossrh</id>
-          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
       </distributionManagement>
     </profile>
   </profiles>
