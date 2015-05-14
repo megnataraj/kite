@@ -333,7 +333,7 @@
   <profiles>
     <profile>
       <id>release</id>
-      <!-- <build>
+      <build>
         <plugins>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -361,8 +361,10 @@
             </configuration>
           </plugin>
         </plugins>
-      </build> -->
-      <distributionManagement>
+      </build>
+    </profile>
+  </profiles>
+  <distributionManagement>
        <snapshotRepository>
           <uniqueVersion>false</uniqueVersion>
           <id>pophealth-snapshot</id>
@@ -377,7 +379,4 @@
           <layout>default</layout>
         </repository>
       </distributionManagement>
-    </profile>
-  </profiles>
-
 </project>

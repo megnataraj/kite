@@ -450,7 +450,7 @@
   <profiles>
     <profile>
       <id>release</id>
-      <!-- <build>
+      <build>
         <plugins>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -478,23 +478,22 @@
             </configuration>
           </plugin>
         </plugins>
-      </build> -->
-      <distributionManagement>
-        <snapshotRepository>
-          <uniqueVersion>false</uniqueVersion>
-          <id>pophealth-snapshot</id>
-          <name>Population Health Processing Infrastructure</name>
-          <url>http://repo.pophealth.cerner.corp/nexus/content/repositories/pophealth-snapshot</url>
-        </snapshotRepository>
-        <repository>
-         <uniqueVersion>false</uniqueVersion>
-          <id>cerner-release-main</id>
-          <name>Cerner Release Repo</name>
-          <url>http://repo.release.cerner.corp/main/repo</url>
-          <layout>default</layout>
-        </repository>
-      </distributionManagement>
+      </build>
     </profile>
   </profiles>
-
+  <distributionManagement>
+      <snapshotRepository>
+        <uniqueVersion>false</uniqueVersion>
+        <id>pophealth-snapshot</id>
+        <name>Population Health Processing Infrastructure</name>
+        <url>http://repo.pophealth.cerner.corp/nexus/content/repositories/pophealth-snapshot</url>
+      </snapshotRepository>
+      <repository>
+       <uniqueVersion>false</uniqueVersion>
+        <id>cerner-release-main</id>
+        <name>Cerner Release Repo</name>
+        <url>http://repo.release.cerner.corp/main/repo</url>
+        <layout>default</layout>
+      </repository>
+  </distributionManagement>
 </project>
