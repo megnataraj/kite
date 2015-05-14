@@ -450,7 +450,7 @@
   <profiles>
     <profile>
       <id>release</id>
-      <build>
+      <!-- <build>
         <plugins>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -478,7 +478,7 @@
             </configuration>
           </plugin>
         </plugins>
-      </build>
+      </build> -->
       <distributionManagement>
         <snapshotRepository>
           <uniqueVersion>false</uniqueVersion>
