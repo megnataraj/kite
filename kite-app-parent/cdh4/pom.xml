@@ -369,6 +369,11 @@
           <name>Population Health Processing Infrastructure</name>
           <url>http://repo.pophealth.cerner.corp/nexus/content/repositories/pophealth-snapshot</url>
         </snapshotRepository>
+        <repository>
+ -        <id>pophealth-snapshot</id>
+          <name>Population Health Processing Infrastructure</name>
+          <url>http://repo.pophealth.cerner.corp/nexus/content/repositories/pophealth-snapshot</url>
+ -        </repository>
       </distributionManagement>
     </profile>
   </profiles>
