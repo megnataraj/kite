@@ -17,9 +17,12 @@
 package org.kitesdk.data.spi.filesystem;
 
 import com.google.common.collect.Lists;
+
 import java.io.IOException;
+import java.net.URI;
 import java.util.Iterator;
 import java.util.List;
+
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericData.Record;
 import org.apache.hadoop.fs.FileStatus;
@@ -30,9 +33,11 @@ import org.kitesdk.data.DatasetDescriptor;
 import org.kitesdk.data.DatasetReader;
 import org.kitesdk.data.Flushable;
 import org.kitesdk.data.Syncable;
+import org.kitesdk.data.spi.DatasetRepository;
 import org.kitesdk.data.spi.ReaderWriterState;
 
 public class TestAvroWriter extends TestFileSystemWriters {
+	
   @Override
   public FileSystemWriter<Record> newWriter(Path directory, Schema schema) {
     return FileSystemWriter.newWriter(fs, directory, 100, 2 * 1024 * 1024,
@@ -44,9 +49,9 @@ public class TestAvroWriter extends TestFileSystemWriters {
                 String.valueOf(32 * 1024 * 1024)) // 32 MB
             .schema(schema)
             .format("avro")
-            .build());
+            .build(), avroDataset);
   }
-
+  
   @Override
   public DatasetReader<Record> newReader(Path path, Schema schema) {
     return new FileSystemDatasetReader<Record>(fs, path, schema, Record.class);

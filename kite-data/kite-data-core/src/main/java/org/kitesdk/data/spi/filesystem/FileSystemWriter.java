@@ -20,10 +20,12 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Throwables;
 import com.google.common.collect.ImmutableSet;
+
 import java.io.Closeable;
 import java.io.IOException;
 import java.util.Set;
 import java.util.UUID;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -39,6 +41,8 @@ import org.kitesdk.data.Formats;
 import org.kitesdk.data.Syncable;
 import org.kitesdk.data.UnknownFormatException;
 import org.kitesdk.data.ValidationException;
+import org.kitesdk.data.View;
+import org.kitesdk.data.spi.AbstractDataset;
 import org.kitesdk.data.spi.AbstractDatasetWriter;
 import org.kitesdk.data.spi.DescriptorUtil;
 import org.kitesdk.data.spi.ReaderWriterState;
@@ -78,6 +82,7 @@ class FileSystemWriter<E> extends AbstractDatasetWriter<E> implements RollingWri
 
   private final Path directory;
   private final DatasetDescriptor descriptor;
+  private final View<E> view;
   private long targetFileSize;
   private long rollIntervalMillis;
   private Path tempPath;
@@ -97,7 +102,7 @@ class FileSystemWriter<E> extends AbstractDatasetWriter<E> implements RollingWri
   final Configuration conf;
 
   private FileSystemWriter(FileSystem fs, Path path, long rollIntervalMillis,
-                           long targetFileSize, DatasetDescriptor descriptor) {
+                           long targetFileSize, DatasetDescriptor descriptor, View<E> view) {
     Preconditions.checkNotNull(fs, "File system is not defined");
     Preconditions.checkNotNull(path, "Destination directory is not defined");
     Preconditions.checkNotNull(descriptor, "Descriptor is not defined");
@@ -109,6 +114,7 @@ class FileSystemWriter<E> extends AbstractDatasetWriter<E> implements RollingWri
     this.descriptor = descriptor;
     this.conf = new Configuration(fs.getConf());
     this.state = ReaderWriterState.NEW;
+    this.view = view;
 
     // copy file format settings from custom properties to the Configuration
     for (String prop : descriptor.listProperties()) {
@@ -337,20 +343,21 @@ class FileSystemWriter<E> extends AbstractDatasetWriter<E> implements RollingWri
   @VisibleForTesting
   @SuppressWarnings("unchecked")
   <E> FileAppender<E> newAppender(Path temp) {
-    Format format = descriptor.getFormat();
+    Format format = descriptor.getFormat(); 
+    
     if (Formats.PARQUET.equals(format)) {
       // by default, Parquet is not durable
       if (DescriptorUtil.isDisabled(
           FileSystemProperties.NON_DURABLE_PARQUET_PROP, descriptor)) {
         return (FileAppender<E>) new DurableParquetAppender(
-            fs, temp, descriptor.getSchema(), conf, descriptor.getCompressionType());
+            fs, temp, view.getSchema(), conf, descriptor.getCompressionType());
       } else {
         return (FileAppender<E>) new ParquetAppender(
-            fs, temp, descriptor.getSchema(), conf,
+            fs, temp, view.getSchema(), conf,
             descriptor.getCompressionType());
       }
     } else if (Formats.AVRO.equals(format)) {
-      return new AvroAppender<E>(fs, temp, descriptor.getSchema(),
+      return new AvroAppender<E>(fs, temp, view.getSchema(),
           descriptor.getCompressionType());
     } else if (Formats.CSV.equals(format) &&
         DescriptorUtil.isEnabled(FileSystemProperties.ALLOW_CSV_PROP, descriptor)) {
@@ -364,24 +371,24 @@ class FileSystemWriter<E> extends AbstractDatasetWriter<E> implements RollingWri
   static <E> FileSystemWriter<E> newWriter(FileSystem fs, Path path,
                                            long rollIntervalMillis,
                                            long targetFileSize,
-                                           DatasetDescriptor descriptor) {
+                                           DatasetDescriptor descriptor, View<E> view) {
     Format format = descriptor.getFormat();
     if (Formats.PARQUET.equals(format)) {
       // by default, Parquet is not durable
       if (DescriptorUtil.isDisabled(
           FileSystemProperties.NON_DURABLE_PARQUET_PROP, descriptor)) {
         return new IncrementalWriter<E>(
-            fs, path, rollIntervalMillis, targetFileSize, descriptor);
+            fs, path, rollIntervalMillis, targetFileSize, descriptor, view);
       } else {
         return new FileSystemWriter<E>(
-            fs, path, rollIntervalMillis, targetFileSize, descriptor);
+            fs, path, rollIntervalMillis, targetFileSize, descriptor, view);
       }
     } else if (Formats.AVRO.equals(format) || Formats.CSV.equals(format)) {
       return new IncrementalWriter<E>(
-          fs, path, rollIntervalMillis, targetFileSize, descriptor);
+          fs, path, rollIntervalMillis, targetFileSize, descriptor, view);
     } else {
       return new FileSystemWriter<E>(
-          fs, path, rollIntervalMillis, targetFileSize, descriptor);
+          fs, path, rollIntervalMillis, targetFileSize, descriptor, view);
     }
   }
 
@@ -389,8 +396,8 @@ class FileSystemWriter<E> extends AbstractDatasetWriter<E> implements RollingWri
       implements Flushable, Syncable {
     private IncrementalWriter(FileSystem fs, Path path,
                               long rollIntervalMillis, long targetFileSize,
-                              DatasetDescriptor descriptor) {
-      super(fs, path, rollIntervalMillis, targetFileSize, descriptor);
+                              DatasetDescriptor descriptor, View<E> view) {
+      super(fs, path, rollIntervalMillis, targetFileSize, descriptor, view);
     }
 
     @Override

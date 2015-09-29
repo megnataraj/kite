@@ -40,7 +40,7 @@ public class TestParquetWriter extends TestFileSystemWriters {
                 "kite.writer.roll-interval-seconds", String.valueOf(1))
             .schema(schema)
             .format("parquet")
-            .build());
+            .build(), avroDataset);
   }
 
   @Override
@@ -70,7 +70,7 @@ public class TestParquetWriter extends TestFileSystemWriters {
                 .requiredString("s")
                 .endRecord())
             .format("parquet")
-            .build());
+            .build(), parquetDataset);
     Assert.assertEquals("Should copy properties to Configuration",
         34343434, writer.conf.getInt("parquet.block.size", -1));
   }
@@ -92,7 +92,7 @@ public class TestParquetWriter extends TestFileSystemWriters {
                 .requiredString("s")
                 .endRecord())
             .format("parquet")
-            .build());
+            .build(), parquetDataset);
     Assert.assertEquals("Disabling the non-durable parquet appender should get us a durable appender",
         DurableParquetAppender.class, writer.newAppender(testDirectory).getClass());
   }
@@ -108,7 +108,7 @@ public class TestParquetWriter extends TestFileSystemWriters {
                 .requiredString("s")
                 .endRecord())
             .format("parquet")
-            .build());
+            .build(), parquetDataset);
     Assert.assertEquals("Enabling the non-durable parquet appender should get us a non-durable appender",
         ParquetAppender.class, writer.newAppender(testDirectory).getClass());
   }
