@@ -142,7 +142,7 @@ public class TestFileSystemView extends TestRefinableViews {
     final long octInstant = octEvent.getTimestamp();
     // aligned with second boundaries, but not partition boundaries
     final long oct12Start = new DateTime(2013, 10, 12, 0, 0, 0, DateTimeZone.UTC).getMillis();
-    final long oct12BadStart = new DateTime(2013, 10, 12, 0, 1, 0, DateTimeZone.UTC).getMillis();
+    final long oct12BadStart = new DateTime(2013, 10, 12, 0, 1, 0, DateTimeZone.UTC).getMillis();	
     final long oct12End = new DateTime(2013, 10, 12, 23, 59, 59, 999, DateTimeZone.UTC).getMillis();
     final long oct12BadEnd = new DateTime(2013, 10, 12, 23, 59, 57, 999, DateTimeZone.UTC).getMillis();
 

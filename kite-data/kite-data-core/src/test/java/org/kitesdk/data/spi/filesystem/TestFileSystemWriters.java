@@ -61,25 +61,13 @@ public abstract class TestFileSystemWriters extends MiniDFSTest {
 
   protected FileSystem fs = null;
   protected Path testDirectory = null;
-  private Configuration conf;
   protected FileSystemWriter<Record> fsWriter = null;
   protected FileSystemDatasetRepository repo;
-  protected DatasetDescriptor testDescriptor = null;
-  protected Dataset<Record> avroDataset;
-  protected Dataset<Object> parquetDataset;
-
+  
   @Before
   public void setup() throws IOException {
     this.fs = getDFS();
-    this.conf = new Configuration();
     this.testDirectory = new Path(Files.createTempDir().getAbsolutePath());
-    this.repo = new FileSystemDatasetRepository(conf, testDirectory);
-    this.testDescriptor = new DatasetDescriptor.Builder()
-    .schema(TEST_SCHEMA)
-    .format("avro")
-    .build();
-    this.avroDataset = repo.create("ns", "avro", testDescriptor);
-    this.parquetDataset = repo.create("ns", "parquet", testDescriptor);
     this.fsWriter = newWriter(testDirectory, TEST_SCHEMA);
   }
 
