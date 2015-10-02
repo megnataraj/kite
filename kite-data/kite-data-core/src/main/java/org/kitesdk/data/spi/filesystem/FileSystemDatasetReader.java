@@ -52,7 +52,7 @@ class FileSystemDatasetReader<E> extends AbstractDatasetReader<E> {
     this.fileSystem = fileSystem;
     this.path = path;
     this.schema = schema;
-    this.type = type;
+    this.type = type;	
 
     this.state = ReaderWriterState.NEW;
   }
