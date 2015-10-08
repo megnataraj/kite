@@ -20,12 +20,10 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Throwables;
 import com.google.common.collect.ImmutableSet;
-
 import java.io.Closeable;
 import java.io.IOException;
 import java.util.Set;
 import java.util.UUID;
-
 import org.apache.avro.Schema;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
@@ -42,8 +40,6 @@ import org.kitesdk.data.Formats;
 import org.kitesdk.data.Syncable;
 import org.kitesdk.data.UnknownFormatException;
 import org.kitesdk.data.ValidationException;
-import org.kitesdk.data.View;
-import org.kitesdk.data.spi.AbstractDataset;
 import org.kitesdk.data.spi.AbstractDatasetWriter;
 import org.kitesdk.data.spi.DescriptorUtil;
 import org.kitesdk.data.spi.ReaderWriterState;
@@ -345,7 +341,6 @@ class FileSystemWriter<E> extends AbstractDatasetWriter<E> implements RollingWri
   @SuppressWarnings("unchecked")
   <E> FileAppender<E> newAppender(Path temp) {
     Format format = descriptor.getFormat(); 
-    
     if (Formats.PARQUET.equals(format)) {
       // by default, Parquet is not durable
       if (DescriptorUtil.isDisabled(

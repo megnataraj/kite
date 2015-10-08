@@ -20,18 +20,13 @@ import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.google.common.io.Files;
-
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
-
 import org.apache.avro.Schema;
 import org.apache.avro.SchemaBuilder;
-import org.apache.avro.generic.GenericData;
-import org.apache.avro.generic.GenericRecord;
 import org.apache.avro.generic.GenericData.Record;
-import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -39,13 +34,8 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.kitesdk.data.Dataset;
-import org.kitesdk.data.DatasetDescriptor;
 import org.kitesdk.data.DatasetReader;
-import org.kitesdk.data.Datasets;
 import org.kitesdk.data.MiniDFSTest;
-import org.kitesdk.data.RefinableView;
-import org.kitesdk.data.spi.DatasetRepository;
 import org.kitesdk.data.spi.InitializeAccessor;
 import org.kitesdk.data.spi.ReaderWriterState;
 
@@ -66,7 +56,6 @@ public abstract class TestFileSystemWriters extends MiniDFSTest {
   protected FileSystem fs = null;
   protected Path testDirectory = null;
   protected FileSystemWriter<Record> fsWriter = null;
-  protected FileSystemDatasetRepository repo;
   
   @Before
   public void setup() throws IOException {
